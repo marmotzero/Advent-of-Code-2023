@@ -1000,6 +1000,20 @@ fivexpx1vsrreightkp7dph
 3eightlrrlgck967
 xcntwone4633sixmkm1nine
 """
-
-
-print("Hello World")
+calibration = calibration.strip()
+calibration_split = calibration.splitlines()
+calibration_sum = 0
+for line in calibration_split:
+    calibration_value = ""
+    for char in line:
+        if char.isdigit() == True:
+            calibration_value += char
+            print(calibration_value)
+            break
+    for char in reversed(line):
+        if char.isdigit() == True:
+            calibration_value += char
+            print(calibration_value)
+            break
+    calibration_sum += int(calibration_value)
+print(calibration_sum)
