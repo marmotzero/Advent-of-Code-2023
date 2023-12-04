@@ -1008,12 +1008,11 @@ for line in calibration_split:
     for char in line:
         if char.isdigit() == True:
             calibration_value += char
-            print(calibration_value)
             break
     for char in reversed(line):
         if char.isdigit() == True:
             calibration_value += char
-            print(calibration_value)
             break
+    print(calibration_value)
     calibration_sum += int(calibration_value)
 print(calibration_sum)
